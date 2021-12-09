@@ -9,7 +9,7 @@ def visited(Node: 'BinaryNode') -> None:
 
 def path_finder(node: 'BinaryNode', path: List['BinaryNode'], paths: List[List['BinaryNode']]):
     path.append(node.value)
-    if node.is_leaf():
+    if node.left_child is None and node.right_child is None:
         paths.append(path.copy())
     if node.left_child:
         path_finder(node.left_child, path, paths)
