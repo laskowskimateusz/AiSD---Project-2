@@ -12,7 +12,7 @@ class BinaryNode:
         self.value = value
 
     def is_leaf(self):
-        return False if self.left_child and self.right_child else True
+        return False if self.left_child is None and self.right_child is None else True
 
     def add_left_child(self, value: Any) -> None:
         self.left_child = BinaryNode(value)
